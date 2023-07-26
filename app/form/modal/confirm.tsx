@@ -13,19 +13,11 @@ function send(data: Data, cbs: [boolean, Dispatch<SetStateAction<boolean>>][]) {
       return
     }
   }
-  if (data.is_edit[0]) {
-    post({ type: 'edit', uid: data.uid[0], body: buildData(data)})
-      .then((res) => {
-        if (res === 'ok') document.location.assign('../exit?url=https://discord.gg/tEXXCQMCh5');
-        else alert('送信に失敗しました。' + res);
-      })
-  } else {
-    post({ type: 'add', uid: data.uid[0], body: buildData(data)})
-      .then((res) => {
-        if (res === 'ok') document.location.assign('../exit?url=https://discord.gg/tEXXCQMCh5');
-        else alert('送信に失敗しました。' + res);
-      })
-  }
+  post({ type: data.is_edit[0] ? 'edit' : 'add', uid: data.uid[0], body: buildData(data) })
+    .then((res) => {
+      if (res === 'ok') document.location.assign('/forms/exit?url=https://discord.gg/tEXXCQMCh5')
+      else alert('送信に失敗しました。' + res);
+    })
 }
 
 export function Confirm({ data }: Props) {
