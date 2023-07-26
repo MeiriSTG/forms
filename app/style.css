@@ -1,0 +1,167 @@
+/* ================================================================================================================= */
+/*     class                                                                                                         */
+/* ================================================================================================================= */
+
+.center {
+    text-align: center;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.right-container {
+    display: flex;
+    justify-content: right;
+}
+
+.plr-0_5rem {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.fs-0_8rem {
+    font-size: 0.8rem;
+}
+
+.fs-1_5rem {
+    font-size: 1.5rem;
+}
+
+.fw-normal {
+    font-weight: normal;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.ml-1rem {
+    margin-left: 1rem;
+}
+
+div.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    border: solid 2px rgb(114, 40, 226);
+}
+
+hr.spacer {
+    color: transparent;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+button.tab {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+button.tab-selected {
+    color: rgb(114, 40, 226);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(114, 40, 226);
+}
+
+button.submit {
+    background-color: rgb(114, 40, 226);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+table.table,
+table.table td {
+    border-collapse: collapse;
+    border: 1px solid rgb(114, 40, 226);
+    padding: 0.4rem;
+}
+
+table.rtable,
+table.rtable td {
+    border-collapse: collapse;
+    border: none;
+    border-bottom: 1px solid rgb(114, 40, 226);
+    padding: 0.4rem;
+}
+
+table.rtable {
+    width: 100%;
+    border: none;
+}
+
+table.rtable td:first-child {
+    white-space: nowrap;
+    width: 0;
+}
+
+table.rtable tr:last-child td {
+    border-bottom: none;
+}
+
+/* ================================================================================================================= */
+/*     tag                                                                                                           */
+/* ================================================================================================================= */
+
+body {
+    background-color: #fcf5ff;
+}
+
+main {
+    background-color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a {
+    font-weight: bold;
+    color: royalblue;
+}
+
+blockquote {
+    background-color: rgb(243, 243, 243);
+    color: rgb(50, 50, 50);
+    border-left: 16px solid rgb(180, 180, 180);
+    padding: 0.3rem 1rem;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* ================================================================================================================= */
+/*     responsive                                                                                                    */
+/* ================================================================================================================= */
+
+@media screen and (max-width: 900px) {
+    main {
+        max-width: 100%;
+    }
+}
