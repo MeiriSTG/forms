@@ -29,12 +29,12 @@ export function Table({ data }: Props) {
         {data.commentator.booleanValue && <tr><td>実況者</td><td>Yes</td></tr>}
         {data.commentator.booleanValue && <tr><td>実況希望作品</td><td>{getCommWorks(data.comm_works.arrayValue.values)}</td></tr>}
         {data.runner.booleanValue && <tr><td>走者</td><td>Yes</td></tr>}
-        {data.golive.booleanValue && <tr><td>配信</td><td>Yes</td></tr>}
-        <tr><td>レベル</td><td>{LEVELS[data.level.integerValue]}</td></tr>
-        <tr><td>1CC</td><td><EntryTable array={data.occ.arrayValue.values} /></td></tr>
-        {data.level.integerValue != 0 && <tr><td>1CC+</td><td><EntryTable array={data.occp.arrayValue.values} /></td></tr>}
-        {data.level.integerValue != 0 && <tr><td>NB</td><td><EntryTable array={data.nb.arrayValue.values} /></td></tr>}
-        {data.level.integerValue != 0 && <tr><td>NB+</td><td><EntryTable array={data.nbp.arrayValue.values} /></td></tr>}
+        {data.runner.booleanValue && <tr><td>配信</td><td>{data.golive.booleanValue ? 'Yes' : 'No'}</td></tr>}
+        {data.runner.booleanValue && <tr><td>レベル</td><td>{LEVELS[data.level.integerValue]}</td></tr>}
+        {data.runner.booleanValue && <tr><td>1CC</td><td><EntryTable array={data.occ.arrayValue.values} /></td></tr>}
+        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>1CC+</td><td><EntryTable array={data.occp.arrayValue.values} /></td></tr>}
+        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>NB</td><td><EntryTable array={data.nb.arrayValue.values} /></td></tr>}
+        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>NB+</td><td><EntryTable array={data.nbp.arrayValue.values} /></td></tr>}
       </tbody>
     </table>
   )
