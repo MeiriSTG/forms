@@ -48,7 +48,8 @@ export function NewComer({ data }: Props) {
       {data.state[0] === 0 &&
         <div className="modal-bg">
           <div className="modal">
-            <p>IDとPasswordを入力</p>
+            <p>【IDとPasswordを入力】</p>
+            <p>エントリー後の内容の修正や確認に使います。<br />運営者に見えるので普段利用しているパスワードは使わない方が良いです。</p>
             <table className="w-100">
               <thead></thead>
               <tbody>
