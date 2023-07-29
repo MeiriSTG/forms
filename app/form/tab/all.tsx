@@ -51,6 +51,15 @@ export function All({ data }: Props) {
 
       <p>4. クリア実績シートを提出してください。</p>
 
+      <p className="ml-1rem">
+        <label className="file">
+          <input type="file" onChange={e => data.clearsheet[1](e.target.files?.item(0) ?? null)} />
+          ファイルを選択
+        </label>
+        {data.clearsheet[0]?.name ?? 'ファイル未選択'}
+        {data.is_edit[0] ? '(アップロード済み)' : ''}
+      </p>
+
       <hr className="spacer"></hr>
 
       <p>5. 参加可能な時間帯をすべて教えてください。</p>

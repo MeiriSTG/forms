@@ -30,6 +30,7 @@ function decodeBits(bits: Bits, target: [boolean, Dispatch<SetStateAction<boolea
 export type Data = {
   is_edit: [boolean, Dispatch<SetStateAction<boolean>>],
   state: [number, Dispatch<SetStateAction<number>>],
+  clearsheet: [File|null, Dispatch<SetStateAction<File|null>>],
   uid: [string, Dispatch<SetStateAction<string>>],
   password: [string, Dispatch<SetStateAction<string>>],
   accept: [boolean, Dispatch<SetStateAction<boolean>>],
@@ -52,6 +53,7 @@ export function initData(): Data {
   return {
     is_edit: useState(false),
     state: useState(0),
+    clearsheet: useState(null as File | null),
     uid: useState(''),
     password: useState(''),
     accept: useState(false),
@@ -93,11 +95,11 @@ export function copyData(data: Data, json: any, uid: string) {
 export function buildData(data: Data): any {
   return {
     fields: {
-      password: { stringValue: data.password[0] },
+      password: { stringValue: data.password[0].trim() },
       accept: { booleanValue: data.accept[0] },
-      name: { stringValue: data.name[0] },
-      discord: { stringValue: data.discord[0] },
-      date: { arrayValue: { values: data.date.map((n) => { return { stringValue: n[0] } }) } },
+      name: { stringValue: data.name[0].trim() },
+      discord: { stringValue: data.discord[0].trim() },
+      date: { arrayValue: { values: data.date.map((n) => { return { stringValue: n[0].trim() } }) } },
       refree: { booleanValue: data.refree[0] },
       commentator: { booleanValue: data.commentator[0] },
       comm_works: { arrayValue: { values: data.comm_works.map((n) => { return { booleanValue: n[0] } }) } },

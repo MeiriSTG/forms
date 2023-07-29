@@ -1,10 +1,9 @@
-export function post(body: any): Promise<string> {
+export function post(formData: FormData): Promise<string> {
   return fetch(
     'https://meiristg.genreihoutengu.workers.dev',
     {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      body: formData,
     }
   )
     .then((res) => res.text())

@@ -59,6 +59,10 @@ function check(data: Data) {
     alert('Discord IDを入力してください')
     return
   }
+  if (!data.is_edit[0] && data.clearsheet[0] === null) {
+    alert('クリアシートを選択してください')
+    return
+  }
   if (!data.accept[0]) {
     alert('規約に同意してください')
     return

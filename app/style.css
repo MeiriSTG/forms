@@ -99,6 +99,7 @@ button.tab-selected {
     border-bottom: 2px solid rgb(114, 40, 226);
 }
 
+label.file,
 button.submit {
     background-color: rgb(114, 40, 226);
     color: white;
@@ -170,6 +171,12 @@ input[type=radio] {
     width: 1.2rem;
     height: 1.2rem;
     margin-right: 0.5rem;
+}
+
+input[type="file"] {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
 }
 
 /* ================================================================================================================= */
