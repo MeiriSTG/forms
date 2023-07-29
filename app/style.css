@@ -2,6 +2,10 @@
 /*     class                                                                                                         */
 /* ================================================================================================================= */
 
+.left {
+    text-align: left;
+}
+
 .center {
     text-align: center;
 }
@@ -37,8 +41,18 @@
     width: 100%;
 }
 
+.box {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .ml-1rem {
     margin-left: 1rem;
+}
+
+.min {
+    white-space: nowrap;
+    width: 0;
 }
 
 div.modal-bg {

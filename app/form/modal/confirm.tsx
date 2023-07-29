@@ -29,7 +29,6 @@ export function Confirm({ data }: Props) {
           <div className="modal">
             <p>【最終確認】</p>
             <p><input type="checkbox" checked={cbs[0][0]} onChange={e => cbs[0][1](e.target.checked)}></input>エントリー完了後のエントリー取消しは受け付けません。</p>
-            <p><input type="checkbox" checked={cbs[1][0]} onChange={e => cbs[1][1](e.target.checked)}></input>エントリー完了後でも参加可能日時の変更は受け付けます。ご自身の都合で参加可能日時が変わった場合は、速やかに主催者へ連絡してください。</p>
             <p><input type="checkbox" checked={cbs[2][0]} onChange={e => cbs[2][1](e.target.checked)}></input>エントリー内容によっては希望に添えない場合があります。予めご了承ください。</p>
             <p><input type="checkbox" checked={cbs[3][0]} onChange={e => cbs[3][1](e.target.checked)}></input>送信完了後、運営サーバーへの招待リンクが表示されますので参加してください（<b>外部に公開しないこと</b>）。</p>
             <p className="right-container">

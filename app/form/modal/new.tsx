@@ -49,7 +49,14 @@ export function NewComer({ data }: Props) {
         <div className="modal-bg">
           <div className="modal">
             <p>【IDとPasswordを入力】</p>
-            <p>エントリー後の内容の修正や確認に使います。<br />運営者に見えるので普段利用しているパスワードは使わない方が良いです。</p>
+            <p>
+              新規登録時は好きに入力して「新規登録」
+              <br />
+              修正時は新規登録時に入力したIDとPasswordを入力して「ログイン」
+            </p>
+            <p>
+              運営者に見えるので普段利用しているものは使わない方が良いです。
+            </p>
             <table className="w-100">
               <thead></thead>
               <tbody>

@@ -37,7 +37,7 @@ export function Tabs(props: Props) {
       {activeTab === '全体' && <All data={props.data} />}
       {activeTab === '審判員' && <Refree data={props.data} />}
       {activeTab === '実況者' && <Commentator data={props.data} />}
-      {activeTab === '走者' && <Runner data={props.data} />}
+      {activeTab === '選手' && <Runner data={props.data} />}
     </div>
   )
 }

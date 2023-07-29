@@ -8,14 +8,14 @@ type Props = {
 export function Runner({ data }: Props) {
   return (
     <div>
-      <p>1. 走者として参加しますか。</p>
+      <p>1. 選手として参加しますか。</p>
       <p className="ml-1rem">
         <input
           type="checkbox"
           checked={data.runner[0]}
           onChange={(e) => data.runner[1](e.target.checked)}
         ></input>
-        走者として参加します。
+        選手として参加します。
       </p>
 
       <hr className="spacer"></hr>
@@ -75,11 +75,6 @@ export function Runner({ data }: Props) {
 
       <p>6.【NB】出場希望の種目を教えてください。</p>
       <WorkSelect part={Part.NB} level={data.level[0]} target={data.nb}></WorkSelect>
-
-      <hr className="spacer"></hr>
-
-      <p>7.【NB+】出場希望の種目を教えてください。</p>
-      <WorkSelect part={Part.NBP} level={data.level[0]} target={data.nbp}></WorkSelect>
     </div>
   )
 }

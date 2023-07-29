@@ -1,11 +1,10 @@
 import { Dispatch, SetStateAction } from "react"
-import { WORKS, DIFFS } from "@/app/api"
+import { WORKS, DIFFS, WORKS_NB } from "@/app/api"
 
 export enum Part {
   OCC,
   OCCP,
   NB,
-  NBP,
 }
 
 type Props = {
@@ -32,12 +31,6 @@ const SHOULD_SHOW_NB: { [index: number]: number[] } = {
   2: [1, 2, 3],
 }
 
-const SHOULD_SHOW_NBP: { [index: number]: number[] } = {
-  0: [],
-  1: [1, 2, 3],
-  2: [1, 2, 3],
-}
-
 function shouldShow(part: Part, level: number, diff: number, work: number): boolean {
   if (diff === 5 && work !== 1)
     return false
@@ -48,8 +41,6 @@ function shouldShow(part: Part, level: number, diff: number, work: number): bool
       return SHOULD_SHOW_OCCP[level].includes(diff)
     case Part.NB:
       return SHOULD_SHOW_NB[level].includes(diff)
-    case Part.NBP:
-      return SHOULD_SHOW_NBP[level].includes(diff)
     default:
       return false
   }
@@ -75,7 +66,10 @@ export function WorkSelect(props: Props) {
       <tbody>
         {props.target.map((row, i) => (
           <tr key={i}>
-            <td>{WORKS[i]}</td>
+            <td className="left">
+              {props.part !== Part.NB && WORKS[i]}
+              {props.part === Part.NB && WORKS_NB[i]}
+            </td>
             {row.map((col, j) => (
               shouldShow(props.part, props.level, j, i) &&
               <td key={j}>
