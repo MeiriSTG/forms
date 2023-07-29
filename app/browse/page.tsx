@@ -5,7 +5,11 @@ import { post } from "@/app/api";
 import { Table } from "./table";
 
 function login(setData: Dispatch<any>, id: string, pw: string) {
-  post({ type: 'get', uid: id, password: pw })
+  const formData = new FormData();
+  formData.append('type', 'get');
+  formData.append('uid', id);
+  formData.append('password', pw);
+  post(formData)
     .then((res) => {
       let json = {};
       try {

@@ -20,8 +20,6 @@ export default function Exit() {
         <p>エントリーを受け付けました。</p>
         <p>
           エントリー内容は、設定したIDとPasswordを用いて、エントリーフォームから修正できます。
-          <br />
-          また、同様に、<a href="/forms/browse">確認ページ</a>から確認できます。
         </p>
         <p><a href={url}>ここから運営サーバーに参加して下さい！</a></p>
         <hr className="spacer" />

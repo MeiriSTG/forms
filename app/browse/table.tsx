@@ -1,4 +1,4 @@
-import { LEVELS, WORKS } from "../api"
+import { LEVELS, Part, WORKS } from "../api"
 import { DateTable } from "./date-table"
 import { EntryTable } from "./entry-table"
 
@@ -30,10 +30,9 @@ export function Table({ data }: Props) {
         {data.runner.booleanValue && <tr><td>選手</td><td>Yes</td></tr>}
         {data.runner.booleanValue && <tr><td>配信</td><td>{data.golive.booleanValue ? 'Yes' : 'No'}</td></tr>}
         {data.runner.booleanValue && <tr><td>レベル</td><td>{LEVELS[data.level.integerValue]}</td></tr>}
-        {data.runner.booleanValue && <tr><td>1CC</td><td><EntryTable array={data.occ.arrayValue.values} /></td></tr>}
-        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>1CC+</td><td><EntryTable array={data.occp.arrayValue.values} /></td></tr>}
-        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>NB</td><td><EntryTable array={data.nb.arrayValue.values} /></td></tr>}
-        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>NB+</td><td><EntryTable array={data.nbp.arrayValue.values} /></td></tr>}
+        {data.runner.booleanValue && <tr><td>1CC</td><td><EntryTable array={data.occ.arrayValue.values} part={Part.OCC} level={data.level.integerValue} /></td></tr>}
+        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>1CC+</td><td><EntryTable array={data.occp.arrayValue.values} part={Part.OCCP} level={data.level.integerValue} /></td></tr>}
+        {data.runner.booleanValue && data.level.integerValue != 0 && <tr><td>NB</td><td><EntryTable array={data.nb.arrayValue.values} part={Part.NB} level={data.level.integerValue} /></td></tr>}
       </tbody>
     </table>
   )

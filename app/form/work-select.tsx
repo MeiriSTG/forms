@@ -1,49 +1,10 @@
 import { Dispatch, SetStateAction } from "react"
-import { WORKS, DIFFS, WORKS_NB } from "@/app/api"
-
-export enum Part {
-  OCC,
-  OCCP,
-  NB,
-}
+import { WORKS, DIFFS, WORKS_NB, Part, shouldShow, WORKS_OCCP } from "@/app/api"
 
 type Props = {
   part: Part,
   level: number,
   target: [boolean, Dispatch<SetStateAction<boolean>>][][],
-}
-
-const SHOULD_SHOW_OCC: { [index: number]: number[] } = {
-  0: [0, 1, 4, 5],
-  1: [2, 3, 4, 5],
-  2: [3],
-}
-
-const SHOULD_SHOW_OCCP: { [index: number]: number[] } = {
-  0: [],
-  1: [1, 2],
-  2: [2, 3],
-}
-
-const SHOULD_SHOW_NB: { [index: number]: number[] } = {
-  0: [],
-  1: [1, 2, 3],
-  2: [1, 2, 3],
-}
-
-function shouldShow(part: Part, level: number, diff: number, work: number): boolean {
-  if (diff === 5 && work !== 1)
-    return false
-  switch (part) {
-    case Part.OCC:
-      return SHOULD_SHOW_OCC[level].includes(diff)
-    case Part.OCCP:
-      return SHOULD_SHOW_OCCP[level].includes(diff)
-    case Part.NB:
-      return SHOULD_SHOW_NB[level].includes(diff)
-    default:
-      return false
-  }
 }
 
 export function WorkSelect(props: Props) {
@@ -67,7 +28,8 @@ export function WorkSelect(props: Props) {
         {props.target.map((row, i) => (
           <tr key={i}>
             <td className="left">
-              {props.part !== Part.NB && WORKS[i]}
+              {props.part === Part.OCC && WORKS[i]}
+              {props.part === Part.OCCP && WORKS_OCCP[i]}
               {props.part === Part.NB && WORKS_NB[i]}
             </td>
             {row.map((col, j) => (

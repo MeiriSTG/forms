@@ -1,5 +1,5 @@
 import { useState, Dispatch, SetStateAction } from 'react'
-import { DATE_ROW, DIFFS, WORKS, WORKS_NB } from '../api'
+import { DATE_ROW, DIFFS, WORKS, WORKS_NB, WORKS_OCCP } from '../api'
 
 type Bits = {
   integerValue: number
@@ -67,7 +67,7 @@ export function initData(): Data {
     golive: useState(false),
     level: useState(0),
     occ: new Array(WORKS.length).fill(0).map(() => new Array(DIFFS.length).fill(0).map(n => n = useState(false))),
-    occp: new Array(WORKS.length).fill(0).map(() => new Array(DIFFS.length).fill(0).map(n => n = useState(false))),
+    occp: new Array(WORKS_OCCP.length).fill(0).map(() => new Array(DIFFS.length).fill(0).map(n => n = useState(false))),
     nb: new Array(WORKS_NB.length).fill(0).map(() => new Array(DIFFS.length).fill(0).map(n => n = useState(false))),
   }
 }

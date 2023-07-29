@@ -42,6 +42,40 @@ function checkDate(data: Data): boolean {
   return true
 }
 
+function checkCommentator(data: Data): boolean {
+  if (!data.runner[0])
+    return false
+  for (const [n, _] of data.comm_works) {
+    if (n)
+      return true
+  }
+  return false
+}
+
+function checkRunner(data: Data): boolean {
+  if (!data.runner[0])
+    return false
+  for (const w of data.occ) {
+    for (const [n, _] of w) {
+      if (n)
+        return true
+    }
+  }
+  for (const w of data.occp) {
+    for (const [n, _] of w) {
+      if (n)
+        return true
+    }
+  }
+  for (const w of data.nb) {
+    for (const [n, _] of w) {
+      if (n)
+        return true
+    }
+  }
+  return false
+}
+
 function check(data: Data) {
   if (data.uid[0].trim().length === 0) {
     alert('Unexpected Error: UserIDを入力してください')
@@ -67,8 +101,8 @@ function check(data: Data) {
     alert('規約に同意してください')
     return
   }
-  if (!data.refree[0] && !data.commentator[0] && !data.runner[0]) {
-    alert('審判員、実況者、選手のいずれか一つ以上は選んでください')
+  if (!data.refree[0] && !checkCommentator(data) && !checkRunner(data)) {
+    alert('審判員、実況者、選手のいずれか一つ以上で参加してください')
     return
   }
   if (data.name[0].match(/^.+（.+）$/) === null && data.name[0].match(/^.+\(.+\)$/) === null) {

@@ -1,5 +1,6 @@
+import { Part } from "@/app/api"
 import { Data } from "../data"
-import { Part, WorkSelect } from "../work-select"
+import { WorkSelect } from "../work-select"
 
 type Props = {
   data: Data,

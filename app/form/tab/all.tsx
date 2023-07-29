@@ -53,7 +53,7 @@ export function All({ data }: Props) {
 
       <p className="ml-1rem">
         <label className="file">
-          <input type="file" onChange={e => data.clearsheet[1](e.target.files?.item(0) ?? null)} />
+          <input type="file" accept=".pdf" onChange={e => data.clearsheet[1](e.target.files?.item(0) ?? null)} />
           ファイルを選択
         </label>
         {data.clearsheet[0]?.name ?? 'ファイル未選択'}
@@ -65,8 +65,9 @@ export function All({ data }: Props) {
       <p>5. 参加可能な時間帯をすべて教えてください。</p>
       <blockquote>
         19時30分から25時まで。hh:mm-hh:mmで入力。複数区間がある場合は「,」で区切る。参加不可能な日は空欄。
-        <br />
         例：19:30-22:00,23:00-25:00
+        <br />
+        一区間二時間は確保するようお願いします。
       </blockquote>
       <table className="ml-1rem w-100 fs-0_8rem center">
         <thead></thead>

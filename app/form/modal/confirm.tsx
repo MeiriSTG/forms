@@ -6,15 +6,6 @@ type Props = {
   data: Data,
 }
 
-function arrayBufferToBase64(arrayBuffer: ArrayBuffer) {
-  const uint8Array = new Uint8Array(arrayBuffer);
-  let binary = '';
-  for (let i = 0; i < uint8Array.length; i++) {
-    binary += String.fromCharCode(uint8Array[i]);
-  }
-  return btoa(binary);
-}
-
 async function send(data: Data, cbs: [boolean, Dispatch<SetStateAction<boolean>>][]) {
   for (const [n, _] of cbs) {
     if (!n) {
