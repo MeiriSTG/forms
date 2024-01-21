@@ -1,0 +1,36 @@
+body {
+  background-color: #fcf5ff;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 20rem;
+  max-width: 100%;
+}
+
+button {
+  background-color: rgb(114, 40, 226);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+#main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.form-table {
+  margin: 1rem auto;
+  padding: 0.2rem;
+}
+

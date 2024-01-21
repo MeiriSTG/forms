@@ -1,0 +1,15 @@
+body {
+  background-color: #fcf5ff;
+}
+
+h1 {
+  text-align: center;
+}
+
+#main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: white;
+}

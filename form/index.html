@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+  <link rel="stylesheet" href="./style.css?20240121">
+  <script src="../api/post.js?20240121"></script>
+  <script src="./script.js?20240121"></script>
+  <title>IDとパスワードの入力</title>
+</head>
+
+<body>
+  <div id="main">
+    <h2>IDとパスワードの入力</h2>
+    <p>
+      【新規エントリー】
+      <br>
+      　　新規にエントリーする方は、設定したい「ID」と「パスワード」を入力して「次へ」をクリックしてください。
+      <br>
+      　　ここで登録した「ID」と「パスワード」を用いて、エントリー内容を確認・修正できます。
+    </p>
+    <p>
+      【確認・修正】
+      <br>
+      　　エントリー時に設定した「ID」と「パスワード」を入力して「次へ」をクリックしてください。
+    </p>
+    <table class="form-table">
+      <tr>
+        <td>ID</td>
+        <td><input id="input-id" type="text" placeholder="id" /></td>
+      </tr>
+      <tr>
+        <td>パスワード</td>
+        <td><input id="input-pass" type="text" placeholder="password" /></td>
+      </tr>
+    </table>
+    <button id="button-next">次へ</button>
+  </div>
+</body>
+
+</html>
