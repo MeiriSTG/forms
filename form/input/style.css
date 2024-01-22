@@ -6,10 +6,26 @@ h1 {
   text-align: center;
 }
 
+hr {
+  margin: 2rem 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+blockquote {
+  background-color: rgb(243, 243, 243);
+  color: rgb(50, 50, 50);
+  border-left: 16px solid rgb(180, 180, 180);
+  padding: 0.3rem 1rem;
+}
+
 #main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
   background-color: white;
+}
+
+.item {
+  margin-left: 1rem;
 }

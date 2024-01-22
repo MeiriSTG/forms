@@ -12,7 +12,148 @@
 
 <body>
   <div id="main">
+    <h2>一般</h2>
 
+    <p>
+      1.
+      <a href="https://docs.google.com/document/d/1P4EFx_TZG2nu0eXmlYo4DrR4amvR160WOV2oEf753Mo/edit?usp=sharing">
+        本大会のルール
+      </a>
+      を確認してください。
+    </p>
+    <p class="item">
+      <input id="accept" type="checkbox" />
+      確認しました。本大会のルールを遵守します。
+    </p>
+
+    <p>2. 本大会で使用する名前（フリガナ）を教えてください。</p>
+    <p class="item">
+      <input id="name" type="text" placeholder="例：明理（メイリ）" />
+    </p>
+
+    <p>3. 連絡用のDiscordアカウントのIDを教えてください。</p>
+    <blockquote>
+      画面配信用とマイク用とを分けたいなどの理由から複数アカウントが必要な場合は、サーバ加入後、運営に連絡してください。
+    </blockquote>
+    <p class="item">
+      <input id="discord" type="text" placeholder="例：meiri or めいり#0000" />
+    </p>
+
+    <p>4. 参加可能な時間帯をすべて教えてください。</p>
+    <blockquote>
+      19時30分から25時まで。hh:mm-hh:mmで入力。複数区間がある場合は「,」で区切る。参加不可能な日は空欄。
+      例：19:30-22:00,23:00-25:00
+      <br />
+      一区間二時間は確保するようお願いします。
+    </blockquote>
+    <div class="item">
+      <table>
+        <tr><td>2/10 (土)</td><td><input id="date-1" type="text" /></td></tr>
+        <tr><td>2/11 (日)</td><td><input id="date-2" type="text" /></td></tr>
+        <tr><td>2/12 (月)</td><td><input id="date-3" type="text" /></td></tr>
+        <tr><td>2/13 (火)</td><td><input id="date-4" type="text" /></td></tr>
+        <tr><td>2/14 (水)</td><td><input id="date-5" type="text" /></td></tr>
+        <tr><td>2/15 (木)</td><td><input id="date-6" type="text" /></td></tr>
+        <tr><td>2/16 (金)</td><td><input id="date-7" type="text" /></td></tr>
+        <tr><td>2/17 (土)</td><td><input id="date-8" type="text" /></td></tr>
+        <tr><td>2/18 (日)</td><td><input id="date-9" type="text" /></td></tr>
+        <tr><td>2/19 (月)</td><td><input id="date-10" type="text" /></td></tr>
+        <tr><td>2/20 (火)</td><td><input id="date-11" type="text" /></td></tr>
+        <tr><td>2/21 (水)</td><td><input id="date-12" type="text" /></td></tr>
+        <tr><td>2/22 (木)</td><td><input id="date-13" type="text" /></td></tr>
+        <tr><td>2/23 (金)</td><td><input id="date-14" type="text" /></td></tr>
+        <tr><td>2/24 (土)</td><td><input id="date-15" type="text" /></td></tr>
+        <tr><td>2/25 (日)</td><td><input id="date-16" type="text" /></td></tr>
+        <tr><td>2/26 (月)</td><td><input id="date-17" type="text" /></td></tr>
+        <tr><td>2/27 (火)</td><td><input id="date-18" type="text" /></td></tr>
+        <tr><td>2/28 (水)</td><td><input id="date-19" type="text" /></td></tr>
+        <tr><td>2/29 (木)</td><td><input id="date-20" type="text" /></td></tr>
+        <tr><td>3/1 (金)</td><td><input id="date-21" type="text" /></td></tr>
+        <tr><td>3/2 (土)</td><td><input id="date-22" type="text" /></td></tr>
+        <tr><td>3/3 (日)</td><td><input id="date-23" type="text" /></td></tr>
+      </table>
+    </div>
+
+    <hr>
+
+    <h2>審判員</h2>
+
+    <p>1. 審判員（副審）として参加しますか。</p>
+    <blockquote>
+      東方明理杯は毎回スタッフが不足しております。可能であれば参加していただけると幸いです。
+    </blockquote>
+    <p class="item">
+      <input id="refree" type="checkbox" />
+      審判員（副審）として参加します。
+    </p>
+
+    <hr>
+
+    <h2>実況者</h2>
+
+    <p>1. 実況者として参加しますか。</p>
+    <blockquote>
+      東方明理杯は毎回スタッフが不足しております。可能であれば参加していただけると幸いです。
+    </blockquote>
+    <p class="item">
+      <input id="commentator" type="checkbox" />
+      実況者として参加します。
+    </p>
+
+    <p>2. 実況を希望する作品を教えてください。</p>
+    <div class="item">
+      <table id="commentator-table">
+        <tr><td>東方紅魔郷</td><td><input id="comm-work-1" type="checkbox" /></td></tr>
+        <tr><td>東方妖々夢</td><td><input id="comm-work-2" type="checkbox" /></td></tr>
+        <tr><td>東方永夜抄</td><td><input id="comm-work-3" type="checkbox" /></td></tr>
+        <tr><td>東方風神録</td><td><input id="comm-work-4" type="checkbox" /></td></tr>
+        <tr><td>東方地霊殿</td><td><input id="comm-work-5" type="checkbox" /></td></tr>
+        <tr><td>東方星蓮船</td><td><input id="comm-work-6" type="checkbox" /></td></tr>
+        <tr><td>妖精大戦争</td><td><input id="comm-work-7" type="checkbox" /></td></tr>
+        <tr><td>東方神霊廟</td><td><input id="comm-work-8" type="checkbox" /></td></tr>
+        <tr><td>東方輝針城</td><td><input id="comm-work-9" type="checkbox" /></td></tr>
+        <tr><td>東方紺珠伝</td><td><input id="comm-work-10" type="checkbox" /></td></tr>
+        <tr><td>東方天空璋</td><td><input id="comm-work-11" type="checkbox" /></td></tr>
+        <tr><td>東方鬼形獣</td><td><input id="comm-work-12" type="checkbox" /></td></tr>
+        <tr><td>東方虹龍洞</td><td><input id="comm-work-13" type="checkbox" /></td></tr>
+      </table>
+    </div>
+
+    <hr>
+
+    <h2>選手</h2>
+
+    <p>1. 選手として参加しますか。</p>
+    <p class="item">
+      <input id="runner" type="checkbox" />
+      選手として参加します。
+    </p>
+
+    <p>2. DiscordのGo Live機能を用いてゲームを配信できますか。</p>
+    <p class="item">
+      <input id="golive" type="checkbox" />
+      配信できます。
+    </p>
+
+    <p>3. 希望する参加レベルを教えてください。</p>
+    <div class="item">
+      <input name="level" type="radio" />
+      初級
+    </div>
+    <div class="item">
+      <input name="level" type="radio" />
+      中級
+    </div>
+    <div class="item">
+      <input name="level" type="radio" />
+      上級
+    </div>
+
+    <p>4.【1CC】出場希望の種目を教えてください。</p>
+
+    <p>5.【1CC+】出場希望の種目を教えてください。</p>
+
+    <p>6.【NB】出場希望の種目を教えてください。</p>
   </div>
 </body>
 
