@@ -26,9 +26,8 @@ blockquote {
   background-color: white;
 }
 
-#occ,
-#occp {
-  width: 600px;
+#occ {
+  width: 850px;
   table-layout: fixed;
 }
 

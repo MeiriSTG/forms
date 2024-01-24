@@ -16,7 +16,7 @@
 
     <p>
       1.
-      <a href="https://docs.google.com/document/d/1P4EFx_TZG2nu0eXmlYo4DrR4amvR160WOV2oEf753Mo/edit?usp=sharing">
+      <a href="https://docs.google.com/document/d/1AHDrJ9TI71ZKcuIo0HSeo34yeyGSJv39RFjk2OrREsI/edit?usp=sharing">
         本大会のルール
       </a>
       を確認してください。
@@ -100,7 +100,7 @@
       実況者として参加します。
     </p>
 
-    <p>2. 実況を希望する作品を教えてください。</p>
+    <p>2. 1CC部門で実況を希望する作品を教えてください。</p>
     <div class="item">
       <table>
         <tr><td>東方紅魔郷</td><td><input id="comm-work-1" type="checkbox" /></td></tr>
@@ -116,6 +116,25 @@
         <tr><td>東方天空璋</td><td><input id="comm-work-11" type="checkbox" /></td></tr>
         <tr><td>東方鬼形獣</td><td><input id="comm-work-12" type="checkbox" /></td></tr>
         <tr><td>東方虹龍洞</td><td><input id="comm-work-13" type="checkbox" /></td></tr>
+      </table>
+    </div>
+
+    <p>3. NB部門で実況を希望する作品を教えてください。</p>
+    <div class="item">
+      <table>
+        <tr><td>東方紅魔郷</td><td><input id="comm-work-nb-1" type="checkbox" /></td></tr>
+        <tr><td>東方妖々夢</td><td><input id="comm-work-nb-2" type="checkbox" /></td></tr>
+        <tr><td>東方永夜抄</td><td><input id="comm-work-nb-3" type="checkbox" /></td></tr>
+        <tr><td>東方風神録</td><td><input id="comm-work-nb-4" type="checkbox" /></td></tr>
+        <tr><td>東方地霊殿</td><td><input id="comm-work-nb-5" type="checkbox" /></td></tr>
+        <tr><td>東方星蓮船</td><td><input id="comm-work-nb-6" type="checkbox" /></td></tr>
+        <tr><td>妖精大戦争</td><td><input id="comm-work-nb-7" type="checkbox" /></td></tr>
+        <tr><td>東方神霊廟</td><td><input id="comm-work-nb-8" type="checkbox" /></td></tr>
+        <tr><td>東方輝針城</td><td><input id="comm-work-nb-9" type="checkbox" /></td></tr>
+        <tr><td>東方紺珠伝</td><td><input id="comm-work-nb-10" type="checkbox" /></td></tr>
+        <tr><td>東方天空璋</td><td><input id="comm-work-nb-11" type="checkbox" /></td></tr>
+        <tr><td>東方鬼形獣</td><td><input id="comm-work-nb-12" type="checkbox" /></td></tr>
+        <tr><td>東方虹龍洞</td><td><input id="comm-work-nb-13" type="checkbox" /></td></tr>
       </table>
     </div>
 
@@ -138,7 +157,12 @@
       配信できます。
     </p>
 
-    <p>3. 希望する参加レベルを教えてください。</p>
+    <p>3. 実況者に話してもらいたいことがある方は記述してください。</p>
+    <div class="item">
+      <textarea id="comment"></textarea>
+    </div>
+
+    <p>4. 希望する参加レベルを教えてください。</p>
     <div class="item">
       <input name="level" type="radio" />
       初級
@@ -152,11 +176,12 @@
       上級
     </div>
 
-    <p>4.【1CC】出場希望の種目を教えてください。</p>
+    <p>5.【1CC】出場希望の種目を教えてください。</p>
     <div class="item">
       <table id="occ">
         <tr>
           <th>作品</th>
+          <th>リトライ</th>
           <th>Easy</th>
           <th>Normal</th>
           <th>Hard</th>
@@ -166,6 +191,7 @@
         </tr>
         <tr id="occ-1">
           <td>東方紅魔郷</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -174,6 +200,7 @@
         </tr>
         <tr id="occ-2">
           <td>東方妖々夢</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -183,6 +210,7 @@
         </tr>
         <tr id="occ-3">
           <td>東方永夜抄</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -191,6 +219,7 @@
         </tr>
         <tr id="occ-4">
           <td>東方風神録</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -199,6 +228,7 @@
         </tr>
         <tr id="occ-5">
           <td>東方地霊殿</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -207,6 +237,7 @@
         </tr>
         <tr id="occ-6">
           <td>東方星蓮船</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -215,6 +246,7 @@
         </tr>
         <tr id="occ-7">
           <td>妖精大戦争</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -223,6 +255,7 @@
         </tr>
         <tr id="occ-8">
           <td>東方神霊廟</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -231,6 +264,7 @@
         </tr>
         <tr id="occ-9">
           <td>東方輝針城</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -239,6 +273,7 @@
         </tr>
         <tr id="occ-10">
           <td>東方紺珠伝</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -247,6 +282,7 @@
         </tr>
         <tr id="occ-11">
           <td>東方天空璋</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -255,6 +291,7 @@
         </tr>
         <tr id="occ-12">
           <td>東方鬼形獣</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
@@ -263,126 +300,7 @@
         </tr>
         <tr id="occ-13">
           <td>東方虹龍洞</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-      </table>
-    </div>
-
-    <p>5.【1CC+】出場希望の種目を教えてください。</p>
-    <div class="item">
-      <table id="occp">
-        <tr>
-          <th>作品</th>
-          <th>Easy</th>
-          <th>Normal</th>
-          <th>Hard</th>
-          <th>Lunatic</th>
-          <th>Extra</th>
-          <th>Phantasm</th>
-        </tr>
-        <tr id="occp-1">
-          <td>東方紅魔郷</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-2">
-          <td>東方妖々夢</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-3">
-          <td>東方永夜抄</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-4">
-          <td>東方風神録</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-5">
-          <td>東方地霊殿</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-6">
-          <td>東方星蓮船</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-7">
-          <td>妖精大戦争</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-8">
-          <td>東方神霊廟</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-9">
-          <td>東方輝針城</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-10">
-          <td>東方紺珠伝</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-11">
-          <td>東方天空璋</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-12">
-          <td>東方鬼形獣</td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-          <td><input type="checkbox" /></td>
-        </tr>
-        <tr id="occp-13">
-          <td>東方虹龍洞</td>
+          <td><select><option>有</option><option>無</option></select></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>
           <td><input type="checkbox" /></td>

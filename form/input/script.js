@@ -58,135 +58,175 @@ document.addEventListener("DOMContentLoaded", async () => {
     accept: { booleanValue: false },
     name: { stringValue: "" },
     discord: { stringValue: "" },
-    date: { arrayValue: { values: [
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-      { stringValue: "" },
-    ] } },
+    date: {
+      arrayValue: {
+        values: [
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+          { stringValue: "" },
+        ]
+      }
+    },
     refree: { booleanValue: false },
     commentator: { booleanValue: false },
-    comm_works: { arrayValue: { values: [
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-      { booleanValue: false },
-    ] } },
+    comm_works: {
+      arrayValue: {
+        values: [
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+        ]
+      }
+    },
+    comm_works_nb: {
+      arrayValue: {
+        values: [
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+          { booleanValue: false },
+        ]
+      }
+    },
     runner: { booleanValue: false },
     golive: { booleanValue: false },
+    comment: { stringValue: "" },
     level: { integerValue: 0 },
-    occ: { arrayValue: { values: [
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-    ] } },
-    occp: { arrayValue: { values: [
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-    ] } },
-    nb: { arrayValue: { values: [
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-      { integerValue: 0 },
-    ] } },
+    occ_retry: {
+      arrayValue: {
+        values: [
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+          { booleanValue: true },
+        ]
+      }
+    },
+    occ: {
+      arrayValue: {
+        values: [
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+        ]
+      }
+    },
+    nb: {
+      arrayValue: {
+        values: [
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+          { integerValue: 0 },
+        ]
+      }
+    },
   }
 
   // occ
   const occ = []
   for (let i = 1; i <= 13; ++i) {
     const e = document.getElementById("occ-" + i)
-    e.addEventListener("change", () => {
-      let v = 0
-      for (let j = 1; j < e.children.length; ++j) {
-        if (e.children[j].firstChild.checked) {
-          v = v | (1 << (j - 1))
-        }
-      }
-      data.occ.arrayValue.values[i - 1].integerValue = v
-    })
     occ.push(e)
   }
-  // occp
-  const occp = []
-  for (let i = 1; i <= 13; ++i) {
-    const e = document.getElementById("occp-" + i)
-    e.addEventListener("change", () => {
-      let v = 0
-      for (let j = 1; j < e.children.length; ++j) {
-        if (e.children[j].firstChild.checked) {
-          v = v | (1 << (j - 1))
+  const maskOcc = (mask, maskp) => {
+    for (const tr of occ) {
+      // retry
+      if (tr.children[1].firstChild.value === "有") {
+        for (let j = 2; j < tr.children.length; ++j) {
+          if (mask & (1 << (j - 2))) {
+            tr.children[j].firstChild.disabled = false
+          } else {
+            tr.children[j].firstChild.disabled = true
+          }
         }
       }
-      data.occp.arrayValue.values[i - 1].integerValue = v
-    })
-    occp.push(e)
+      // no retry
+      else {
+        for (let j = 2; j < tr.children.length; ++j) {
+          if (maskp & (1 << (j - 2))) {
+            tr.children[j].firstChild.disabled = false
+          } else {
+            tr.children[j].firstChild.disabled = true
+          }
+        }
+      }
+    }
   }
-  // occp
+  // nb
   const nb = []
   for (let i = 1; i <= 19; ++i) {
     const e = document.getElementById("nb-" + i)
@@ -201,36 +241,48 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
     nb.push(e)
   }
-
-  const switchWorks = (level) => {
-    const mask = (arr, mask) => {
-      for (const tr of arr) {
-        for (let j = 1; j < tr.children.length; ++j) {
-          if (mask & (1 << (j - 1))) {
-            tr.children[j].firstChild.disabled = false
-          } else {
-            tr.children[j].firstChild.disabled = true
-          }
+  const maskNb = (mask) => {
+    for (const tr of nb) {
+      for (let j = 1; j < tr.children.length; ++j) {
+        if (mask & (1 << (j - 1))) {
+          tr.children[j].firstChild.disabled = false
+        } else {
+          tr.children[j].firstChild.disabled = true
         }
       }
     }
+  }
+
+  const switchWorks = (level) => {
     if (level == 0) {
-      mask(occ, 51)
-      mask(occp, 0)
-      mask(nb, 0)
+      maskOcc(51, 0)
+      maskNb(0)
     }
     else if (level == 1) {
-      mask(occ, 60)
-      mask(occp, 54)
-      mask(nb, 7)
+      maskOcc(60, 54)
+      maskNb(7)
     }
     else {
-      mask(occ, 8)
-      mask(occp, 60)
-      mask(nb, 7)
+      maskOcc(8, 60)
+      maskNb(7)
     }
   }
   switchWorks(0)
+
+  for (let i = 0; i < occ.length; ++i) {
+    const e = occ[i]
+    e.addEventListener("change", () => {
+      data.occ_retry.arrayValue.values[i].booleanValue = e.children[1].firstChild.value === "有"
+      let v = 0
+      for (let j = 2; j < e.children.length; ++j) {
+        if (e.children[j].firstChild.checked) {
+          v = v | (1 << (j - 2))
+        }
+      }
+      data.occ.arrayValue.values[i].integerValue = v
+      switchWorks(data.level.integerValue)
+    })
+  }
 
   // accept
   const accept = document.getElementById("accept")
@@ -261,12 +313,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     e.addEventListener("change", () => data.comm_works.arrayValue.values[i - 1].booleanValue = e.checked)
     comm_work.push(e)
   }
+  // comm-work-nb
+  const comm_work_nb = []
+  for (let i = 1; i <= 13; ++i) {
+    const e = document.getElementById("comm-work-nb-" + i)
+    e.addEventListener("change", () => data.comm_works_nb.arrayValue.values[i - 1].booleanValue = e.checked)
+    comm_work_nb.push(e)
+  }
   // runner
   const runner = document.getElementById("runner")
   runner.addEventListener("change", () => data.runner.booleanValue = runner.checked)
   // golive
   const golive = document.getElementById("golive")
   golive.addEventListener("change", () => data.golive.booleanValue = golive.checked)
+  // comment
+  const comment = document.getElementById("comment")
+  comment.addEventListener("change", () => data.comment.stringValue = comment.value)
   // level
   const level = document.getElementsByName("level")
   for (let i = 0; i < level.length; ++i) {
@@ -309,20 +371,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     for (let i = 0; i < comm_work.length; ++i) {
       comm_work[i].checked = data.comm_works.arrayValue.values[i].booleanValue
     }
+    for (let i = 0; i < comm_work_nb.length; ++i) {
+      comm_work_nb[i].checked = data.comm_works_nb.arrayValue.values[i].booleanValue
+    }
     runner.checked = data.runner.booleanValue
     golive.checked = data.golive.booleanValue
+    comment.value = data.comment.stringValue
     setLevel(data.level.integerValue)
     for (let i = 0; i < occ.length; ++i) {
-      for (let j = 1; j < occ[i].children.length; ++j) {
-        if (data.occ.arrayValue.values[i].integerValue & (1 << (j - 1))) {
-          occ[i].children[j].firstChild.checked = true
-        }
+      if (data.occ_retry.arrayValue.values[i].booleanValue) {
+        occ[i].children[1].firstChild.value = "有"
+      } else {
+        occ[i].children[1].firstChild.value = "無"
       }
-    }
-    for (let i = 0; i < occp.length; ++i) {
-      for (let j = 1; j < occp[i].children.length; ++j) {
-        if (data.occp.arrayValue.values[i].integerValue & (1 << (j - 1))) {
-          occp[i].children[j].firstChild.checked = true
+      for (let j = 2; j < occ[i].children.length; ++j) {
+        if (data.occ.arrayValue.values[i].integerValue & (1 << (j - 2))) {
+          occ[i].children[j].firstChild.checked = true
         }
       }
     }
