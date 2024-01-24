@@ -26,6 +26,51 @@ blockquote {
   background-color: white;
 }
 
+#occ,
+#occp {
+  width: 600px;
+  table-layout: fixed;
+}
+
+#occ td,
+#occp td {
+  text-align: center;
+}
+
+#occ td:first-child,
+#occp td:first-child {
+  text-align: left;
+}
+
+#nb {
+  width: 600px;
+  table-layout: fixed;
+}
+
+#nb td {
+  text-align: center;
+}
+
+#nb td:first-child {
+  text-align: left;
+}
+
 .item {
   margin-left: 1rem;
+}
+
+#submit-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit {
+  background-color: rgb(114, 40, 226);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
 }
