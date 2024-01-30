@@ -14,13 +14,13 @@
     const url = new URL(window.location.href)
     const params = url.searchParams
     const type = params.get('url')
-    if (!url) {
+    if (!type) {
       alert("不正なアクセスです。")
     } else {
       const main = document.getElementById("main")
       main.innerHTML = `
         <p>エントリーを受け付けました。</p>
-        <p><a href="` + url + `">ここから運営サーバーに参加して下さい！</a></p>
+        <p><a href="` + type + `">ここから運営サーバーに参加して下さい！</a></p>
         <p>　</p>
         <p><a href="../../../">エントリートップページに戻る</a></p>
       `
