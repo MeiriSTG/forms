@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   // comm-work-nb
   const comm_work_nb = []
-  for (let i = 1; i <= 13; ++i) {
+  for (let i = 1; i <= 19; ++i) {
     const e = document.getElementById("comm-work-nb-" + i)
     e.addEventListener("change", () => data.comm_works_nb.arrayValue.values[i - 1].booleanValue = e.checked)
     comm_work_nb.push(e)
